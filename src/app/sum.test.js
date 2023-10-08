@@ -1,7 +1,7 @@
-import React from "react";
-import { screen, render } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import TesteJest from "./test_page";
+import React from 'react';
+import { screen, render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import TesteJest from './test_page';
 
 // const sum = require('./sum');
 
@@ -20,5 +20,5 @@ import TesteJest from "./test_page";
 test('Verifica a existência do texto "Olá, mundo!" no DOM', async () => {
   render(<TesteJest></TesteJest>);
 
-  expect(screen.getByText("Olá, mundo!")).toBeInTheDocument();
+  expect(screen.getByText('Olá, mundo!')).toBeInTheDocument();
 });

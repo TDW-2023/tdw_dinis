@@ -1,5 +1,5 @@
-import "../newstyles.css";
-import Link from "next/link";
+import '../newstyles.css';
+import Link from 'next/link';
 
 export default function Hello() {
   return (
