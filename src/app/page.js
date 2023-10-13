@@ -47,7 +47,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Next Page <span>-&gt;</span>
+            Next Page_ <span>-&gt;</span>
           </h2>
           <p>teste routes :)</p>
         </Link>
