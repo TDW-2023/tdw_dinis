@@ -39,7 +39,7 @@ export default function Home() {
         />
       </div>
       <div>
-        <p>Dinis Antunes</p>
+        <p>Dinis Antunes_02</p>
       </div>
       <div className={styles.grid}>
         <Link
