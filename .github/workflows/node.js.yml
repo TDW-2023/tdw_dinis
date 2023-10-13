@@ -32,9 +32,7 @@ jobs:
       - run: npm run lint
 
   deploy-direct:
-    
-if: github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'master'
-    needs: [build]
+    if: github.repository == 'master' && ${{ success() }}
     runs-on: ubuntu-latest
 
     # strategy:
