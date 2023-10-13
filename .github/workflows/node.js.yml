@@ -49,5 +49,3 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run build
-      -run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth 
-$NETLIFY_AUTH_TOKEN --prod
