@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
@@ -13,6 +13,7 @@
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.2",
     "jest-environment-jsdom": "^29.7.0",
+    "netlify-cli": "^16.7.0",
     "next": "13.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
