@@ -7,8 +7,7 @@ module.exports = {
     forceSwcTransforms: true,
   },
   images: {
-    unoptimized: true
-   },
-   output: "export"
-   
+    unoptimized: true,
+  },
+  output: 'export',
 };

@@ -38,7 +38,9 @@ export default function Home() {
           priority
         />
       </div>
-<div><p>Dinis Antunes</p></div>
+      <div>
+        <p>Dinis Antunes</p>
+      </div>
       <div className={styles.grid}>
         <Link
           href="/pages"
