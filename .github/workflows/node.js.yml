@@ -26,15 +26,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm install
-      - run: npx prettier . --write
       - run: npx prettier . --check
+      - run: npx prettier . --write
       - run: npm run test
       - run: npm run lint
 
   deploy-direct:
-    if: github.repository == 'master' && ${{ success() }}
     runs-on: ubuntu-latest
-
+    if: github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'master'
+    needs: [build]
     # strategy:
     #   matrix:
     #     node-version: [14.x, 16.x, 18.x]
