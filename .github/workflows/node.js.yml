@@ -30,3 +30,22 @@ jobs:
       - run: npx prettier . --write
       - run: npm run test
       - run: npm run lint
+
+  deploy-direct:
+    if: github.repository == 'master' && ${{ success() }}
+    runs-on: ubuntu-latest
+
+    # strategy:
+    #   matrix:
+    #     node-version: [14.x, 16.x, 18.x]
+    #     # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: deploy
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm install
+      - run: npm run build
